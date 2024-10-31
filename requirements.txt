@@ -1,0 +1,13 @@
+transformers
+flask
+torch
+pillow
+numpy
+matplotlib
+opencv-python
+pytesseract
+nltk
+django
+seaborn
+keras
+scikit-learn

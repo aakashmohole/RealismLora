@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RealismLora</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+<!-- Navbar -->
+ 
+<nav class="bg-gray-200">
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div class="relative flex h-16 items-center justify-between">
+        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          <!-- Mobile menu button-->
+          <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+            <span class="absolute -inset-0.5"></span>
+            <span class="sr-only">Open main menu</span>
+            <!--    
+              Icon when menu is closed.
+  
+              Menu open: "hidden", Menu closed: "block"
+            -->
+            <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+            <!--
+              Icon when menu is open.
+  
+              Menu open: "block", Menu closed: "hidden"
+            -->
+            <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+          <div class="flex flex-shrink-0 items-center">
+            <a href="{% url 'home'%}"> <img class="h-8 w-auto" src="/static/images/logo2.png" alt="Your Company"> </a>
+          </div>
+          <div class="hidden sm:ml-6 sm:block">
+            <div class="flex space-x-4">
+              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                <a href="{% url 'home'%}" class="rounded-md px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-900 hover:text-white">Home</a>
+                <a href="{% url 'text' %}" class="rounded-md px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-900 hover:text-white">Text Moderation</a>
+                <a href="{% url 'image' %}" class="rounded-md px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-900 hover:text-white">Image Moderation</a>
+                <a href="{% url 'aboutme' %}" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-gray-100 hover:bg-gray-900 hover:text-gray-100" aria-current="page">About Me</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="sm:hidden" id="mobile-menu">
+      <div class="space-y-1 px-2 pb-3 pt-2">
+        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+        <a href="{% url 'home'%}" class="rounded-md px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-900 hover:text-white">Home</a>
+        <a href="{% url 'text' %}" class="rounded-md px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-900 hover:text-white">Text Moderation</a>
+        <a href="{% url 'image' %}" class="rounded-md px-3 py-2 text-sm font-medium text-gray-900 hover:bg-gray-900 hover:text-white">Image Moderation</a>
+        <a href="{% url 'aboutme' %}" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-gray-100 hover:bg-gray-900 hover:text-gray-100" aria-current="page">About Me</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Home page -->
+  
+
+  <section class="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:px-8">
+    <div class="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,theme(colors.indigo.100),white)] opacity-20"></div>
+    <div class="absolute inset-y-0 right-1/2 -z-10 mr-16 w-[200%] origin-bottom-left skew-x-[-30deg] bg-white shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 sm:mr-28 lg:mr-0 xl:mr-16 xl:origin-center"></div>
+    <div class="mx-auto max-w-2xl lg:max-w-4xl">
+      <img class="mx-auto h-12" src="https://tailwindui.com/plus/img/logos/workcation-logo-indigo-600.svg" alt="">
+      <figure class="mt-10">
+        <blockquote class="text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
+          <p>“I'm a dedicated B-Tech student at DYPCET with a profound interest in Data Science. I am committed to mastering the art of transforming raw data into actionable insights. My academic pursuits have equipped me with a robust foundation in data analysis, machine learning, and data visualization.”</p>
+        </blockquote>
+        <figcaption class="mt-10">
+          <img class="mx-auto h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80 " alt="">
+          <div class="mt-4 flex items-center justify-center space-x-3 text-base">
+            <div class="font-semibold text-gray-900">Aakash Mohole</div>
+            <svg viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="fill-gray-900">
+              <circle cx="1" cy="1" r="1" />
+            </svg>
+            <div class="text-gray-600">Data Science Enthusiast | ML Enthusiast</div>
+          </div>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+  
+<!-- About me -->
+
+
+<!--
+  This example requires some changes to your config:
+  
+  ```
+  // tailwind.config.js
+  module.exports = {
+    // ...
+    plugins: [
+      // ...
+      require('@tailwindcss/forms'),
+    ],
+  }
+  ```
+-->
+<div id="about-me" class="relative isolate overflow-hidden bg-gray-900 py-16 sm:py-24 lg:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
+      <div class="max-w-xl lg:max-w-lg">
+        <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Hello, I am Aakash</h2>
+        <p class="mt-4 text-lg leading-8 text-gray-300">
+          I am a skilled computer science professional with expertise in Python, SQL, machine learning, data visualization, web development, and project management, dedicated to leveraging data-driven insights to solve complex problems</p>
+        <div class="mt-6 flex max-w-md gap-x-4">
+          <label for="email-address" class="sr-only">Enter your message</label>
+          <input id="email-address" name="email" type="email" autocomplete="email" required class="min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6" placeholder="Enter your message">
+          <button type="submit" class="flex-none rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Send</button>
+        </div>
+      </div>
+      <dl class="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:pt-2">
+        <div class="flex flex-col items-start">
+          <div class="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
+            <a href="https://www.linkedin.com/in/aakash-mohole-231359233/">
+            <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 8.25A5.25 5.25 0 0 1 21.75 13.5v5.25h-3.75v-5.25a1.5 1.5 0 1 0-3 0v5.25H11.25v-7.5h3.75v1.125A5.25 5.25 0 0 1 16.5 8.25zM8.25 9.75v7.5H4.5v-7.5h3.75zm-.75-4.125a1.875 1.875 0 1 1-3.75 0 1.875 1.875 0 0 1 3.75 0z" />
+            </svg>
+            </a>
+          </div>
+          <dt class="mt-4 font-semibold text-white"><a href="https://www.linkedin.com/in/aakash-mohole-231359233/">Linkedin</a></dt>
+          <dd class="mt-2 leading-7 text-gray-400">Connect with me on LinkedIn to collaborate on data science, AI projects, and innovative tech solutions. Let's grow together!</dd>
+        </div>
+        <div class="flex flex-col items-start">
+          <div class="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
+            <a href="https://github.com/aakashmohole">
+            <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.49.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.704-2.782.604-3.369-1.34-3.369-1.34-.454-1.153-1.11-1.46-1.11-1.46-.908-.62.069-.607.069-.607 1.003.07 1.53 1.03 1.53 1.03.892 1.528 2.341 1.087 2.91.831.092-.646.35-1.087.635-1.337-2.22-.252-4.555-1.11-4.555-4.944 0-1.092.39-1.985 1.03-2.683-.103-.253-.447-1.27.098-2.647 0 0 .84-.27 2.75 1.026A9.561 9.561 0 0 1 12 6.844a9.56 9.56 0 0 1 2.504.338c1.91-1.296 2.75-1.026 2.75-1.026.545 1.377.202 2.394.099 2.647.64.698 1.03 1.591 1.03 2.683 0 3.842-2.338 4.688-4.565 4.935.36.31.68.927.68 1.87 0 1.35-.012 2.44-.012 2.77 0 .268.18.58.688.481A10.013 10.013 0 0 0 22 12c0-5.523-4.477-10-10-10z" />
+            </svg>
+          </a>
+          </div>
+          <dt class="mt-4 font-semibold text-white"><a href="https://github.com/aakashmohole">GitHub</a></dt>
+          <dd class="mt-2 leading-7 text-gray-400">Explore my GitHub for exciting projects in data science, AI, and web development. Let's collaborate and build together!</dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+  <div class="absolute left-1/2 top-0 -z-10 -translate-x-1/2 blur-3xl xl:-top-6" aria-hidden="true">
+    <div class="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+  </div>
+</div>
+
+
+</body>
+</html>
