@@ -11,3 +11,4 @@ django
 seaborn
 keras
 scikit-learn
+gunicorn
