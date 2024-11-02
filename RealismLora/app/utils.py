@@ -23,7 +23,7 @@ import re
 pytesseract.pytesseract.tesseract_cmd = r'C:/Program Files/Tesseract-OCR/tesseract.exe'  # Update this path for Windows
 
 # Load your fine-tuned BERT model and tokenizer
-model = BertForSequenceClassification.from_pretrained('../Content Moderation/bert_model/')
+model = BertForSequenceClassification.from_pretrained('../Content_Moderation/bert_model/')
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 
 
