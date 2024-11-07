@@ -73,9 +73,6 @@ Once everything is set up, you can start using Realism Lora by uploading images 
 
 ---
 
-## Snapshots
-
-Here are some snapshots of the Realism Lora system in action:
 
 ## Future Enhancements
 
