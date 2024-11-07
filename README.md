@@ -3,21 +3,15 @@
 
 Realism Lora is a content moderation system designed for moderating images and text, ensuring that user-generated content aligns with set guidelines. The backend is implemented in Django, and the system utilizes deep learning models to filter inappropriate or harmful content.
 
-## Table of Contents
 
-- [Introduction](#introduction)
-- [Features](#features)
-- [Model Overview](#model-overview)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Snapshots](#snapshots)
-- [Video Demo](#video-demo)
-- [Future Enhancements](#future-enhancements)
-- [Contributing](#contributing)
-- [License](#license)
+## Video Demo
+
+Watch this video for a detailed walkthrough of Realism Lora:
+
+
+[![Realism Lora Video Demo](https://github.com/aakashmohole/RealismLora/blob/main/images/RealismLora.png)](https://youtu.be/lyINC0Oe--g)
 
 ---
-
 ## Introduction
 
 **Realism Lora** moderates content in real-time, offering a scalable solution to manage and filter images and text. This project is particularly useful for social media platforms, forums, or websites that handle user-generated content. The moderation system flags or removes content that does not meet predetermined safety standards, ensuring a safer online environment.
@@ -82,32 +76,6 @@ Once everything is set up, you can start using Realism Lora by uploading images 
 ## Snapshots
 
 Here are some snapshots of the Realism Lora system in action:
-
-### Overview
-![Landing Page Screenshot](https://github.com/aakashmohole/RealismLora/blob/main/images/landing.png)
-![Home Screenshot](https://github.com/aakashmohole/RealismLora/blob/main/images/home.png)
-
-
-
-### Flagged Content
-
-![text Screenshot](https://github.com/aakashmohole/RealismLora/blob/main/images/textex.png)
-
-![output Screenshot](https://github.com/aakashmohole/RealismLora/blob/main/images/textoutput.png)
-
-![img Screenshot](https://github.com/aakashmohole/RealismLora/blob/main/images/imgex.png)
-
-![output Screenshot](https://github.com/aakashmohole/RealismLora/blob/main/images/imgoutput.png)
-
----
-
-## Video Demo
-
-Watch this video for a detailed walkthrough of Realism Lora:
-
-[![Realism Lora Video Demo](images/video_thumbnail.png)](https://yourvideolink.com)
-
----
 
 ## Future Enhancements
 
