@@ -28,7 +28,8 @@ SECRET_KEY = 'django-insecure-+k0b$^y)itxtxad6+i68lbh=*le&26ci8wiimm%p^i!gi_v$da
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["realismlora.onrender.com"]
+ALLOWED_HOSTS = ["*"]
+# ALLOWED_HOSTS = ["realismlora.onrender.com"]
 
 
 # Application definition
