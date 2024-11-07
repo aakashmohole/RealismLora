@@ -40,9 +40,6 @@ This section explains the models used for text and image moderation.
 
 - **Text Moderation Model**: The BERT-base-uncased model is a variant of the BERT (Bidirectional Encoder Representations from Transformers) model, designed by Google. It has 12 layers, 768 hidden units, and 110 million parameters, making it effective for various NLP tasks such as text classification, named entity recognition, and question answering. "Uncased" means it doesn't differentiate between uppercase and lowercase letters, making it suitable for case-insensitive applications.
 
-### Working of the Model
-
-![Model Workflow]()
 
 ## Installation
 
@@ -86,11 +83,21 @@ Once everything is set up, you can start using Realism Lora by uploading images 
 
 Here are some snapshots of the Realism Lora system in action:
 
-### Dashboard Overview
-![Dashboard Screenshot](images/dashboard_screenshot.png)
+### Overview
+![Landing Page Screenshot](https://github.com/aakashmohole/RealismLora/blob/main/images/landing.png)
+![Home Screenshot](https://github.com/aakashmohole/RealismLora/blob/main/images/home.png)
+
+
 
 ### Flagged Content
-![Flagged Content Screenshot](images/flagged_content.png)
+
+![text Screenshot](https://github.com/aakashmohole/RealismLora/blob/main/images/textex.png)
+
+![output Screenshot](https://github.com/aakashmohole/RealismLora/blob/main/images/textoutput.png)
+
+![img Screenshot](https://github.com/aakashmohole/RealismLora/blob/main/images/imgex.png)
+
+![output Screenshot](https://github.com/aakashmohole/RealismLora/blob/main/images/imgoutput.png)
 
 ---
 
